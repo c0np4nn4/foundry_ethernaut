@@ -3,7 +3,7 @@
 pragma solidity ^0.8.10;
 
 import './BaseLevel.sol';
-import 'openzeppelin-contracts/contracts/access/Ownable.sol';
+import 'openzeppelin-contracts/access/Ownable.sol';
 
 contract Ethernaut is Ownable {
 

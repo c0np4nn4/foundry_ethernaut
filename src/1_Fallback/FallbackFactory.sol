@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-import "../base/Level.sol";
+import "../BaseLevel.sol";
 import "./Fallback.sol";
 
 contract FallbackFactory is Level{

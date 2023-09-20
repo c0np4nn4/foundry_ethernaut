@@ -1,29 +1,8 @@
-// // SPDX-License-Identifier: MIT
-// pragma solidity ^0.8.13;
-
-// import {Test, console2} from "forge-std/Test.sol";
-// import { Fallback } from "../src/1_Fallback/Fallback.sol";
-
-// contract FallbackTest is Test {
-//     Fallback public instance;
-
-//     uint num;
-
-//     function setUp() public {
-//       num = 10;
-//     }
-
-//     function testFuzz_asdf(uint x) public {
-//       num = x;
-//       assertEq(num, x);
-//     }
-// }
-
 pragma solidity ^0.8.10;
 
 import "ds-test/test.sol";
-import "..src/1_Fallback/FallbackFactory.sol";
-import "../Ethernaut.sol";
+import "../src/1_Fallback/FallbackFactory.sol";
+import "../src/Ethernaut.sol";
 import "./utils/vm.sol";
 
 contract FallbackTest is DSTest {
