@@ -3,6 +3,10 @@
 `Foundry`!!!!
 
 ---
+# FYI
+Reference: [ethernaut-x-foundry](https://github.com/ciaranmcveigh5/ethernaut-x-foundry)
+
+---
 # how to check solution
 
 ```bash
