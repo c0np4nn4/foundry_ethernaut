@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.10;
 
 import "../BaseLevel.sol";
-import "./Fallback.sol";
+import "./Fallout.sol";
 
-contract FallbackFactory is Level {
+contract FalloutFactory is Level {
     function createInstance(address _player)
         public
         payable
@@ -13,19 +13,16 @@ contract FallbackFactory is Level {
         returns (address)
     {
         _player;
-        Fallback instance = new Fallback();
-
+        Fallout instance = new Fallout();
         return address(instance);
     }
 
     function validateInstance(address payable _instance, address _player)
         public
-        view
         override
         returns (bool)
     {
-        Fallback instance = Fallback(_instance);
-
-        return instance.owner() == _player && address(instance).balance == 0;
+        Fallout instance = Fallout(_instance);
+        return instance.owner() == _player;
     }
 }
