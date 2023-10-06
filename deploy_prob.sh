@@ -24,12 +24,24 @@ anvil &
 # sleep for sequential execution
 sleep 0.2
 
+printf "\n\n======================================================\n"
+printf "[${RED}*${NC}] ${GREEN}Availabe Problem list...${NC}\n"
+
+for file in ./src/*_*/; do
+    base_file=$(basename "$file")
+    
+    problem_title=${base_file#*_}
+    problem_title=${problem_title%.sol}
+    
+    # 결과를 출력합니다.
+    printf " - ${CYAN}$problem_title${NC}\n"
+done
 
 # # ----- choose the problem  -----
 printf "\n\n======================================================\n"
 printf "[${RED}*${NC}] ${GREEN}Availabe Solution list...${NC}\n"
 
-for file in ./src/0_Solutions/*_*.t.sol; do
+for file in ./test/solutions/*_*.t.sol; do
     base_file=$(basename "$file")
     
     problem_title=${base_file#*_}
