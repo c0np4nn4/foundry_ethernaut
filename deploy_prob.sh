@@ -8,21 +8,21 @@ NC='\033[0m' # No Color
 
 # ----- RUN Fresh anvil -----
 
-# find the PID of 'anvil'
-PIDS=$(ps -av | grep anvil | grep -v grep | awk '{print $1}')
-for PID in $PIDS
-do
-    kill -9 $PID
-done
+# # find the PID of 'anvil'
+# PIDS=$(ps -av | grep anvil | grep -v grep | awk '{print $1}')
+# for PID in $PIDS
+# do
+#     kill -9 $PID
+# done
 
-# sleep for sequential execution
-sleep 0.2
+# # sleep for sequential execution
+# sleep 0.2
 
-# run anvil in background
-anvil &
+# # run anvil in background
+# anvil &
 
-# sleep for sequential execution
-sleep 0.2
+# # sleep for sequential execution
+# sleep 0.2
 
 printf "\n\n======================================================\n"
 printf "[${RED}*${NC}] ${GREEN}Availabe Problem list...${NC}\n"
